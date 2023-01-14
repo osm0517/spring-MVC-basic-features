@@ -1,8 +1,7 @@
 package com.springMVC.basic.controller.request;
 
-import com.springMVC.basic.HelloData;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.http.HttpStatusCode;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -25,6 +24,6 @@ public class RequestTextController {
     ){
         log.debug("data = {}", data);
 
-        return new ResponseEntity<>("ok", HttpStatusCode.valueOf(200));
+        return new ResponseEntity<>("ok", HttpStatus.OK);
     }
 }
